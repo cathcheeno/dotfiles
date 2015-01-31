@@ -1,0 +1,21 @@
+[user]
+name = Go Ohtani
+email = cathcheeno@gmail.com
+
+[push]
+default = simple
+
+[core]
+excludesfile = ~/.gitignore_global
+
+[color]
+diff = auto
+branch = auto
+interactive = auto
+grep = auto
+
+[alias]
+st = status
+ls = log --stat
+ll = log --stat --abbrev-commit --graph
+info = remote show origin
