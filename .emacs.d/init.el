@@ -35,6 +35,17 @@
 (powerline-default-theme)
 
 ;; ==============================
+;;; emmet-mode設定
+;; ==============================
+(require 'emmet-mode)
+;; マークアップ言語全部で使う
+(add-hook 'sgml-mode 'emmet-mode)
+;; CSSにも使う
+(add-hook 'css-mode-hook 'emmet-mode)
+;; indentはスペース2つ
+(add-hook 'emmet-mode-hook (lambda () (setq emmet-indentation 2)))
+
+;; ==============================
 ;;; ag設定
 ;; ==============================
 (require 'ag)
@@ -233,3 +244,6 @@
 ;; 先頭/末尾に移動
 (define-key global-map (kbd "C-c <") 'beginning-of-buffer); バッファの先頭に移動
 (define-key global-map (kbd "C-c >") 'end-of-buffer); バッファの末尾に移動
+
+;; emmet-expand-line
+(define-key emmet-mode-keymap (kbd "C-c C-e") 'emmet-expand-line); 展開
