@@ -231,11 +231,11 @@
 ;; "C-t"でウィンドウを切り替える
 (define-key global-map (kbd "C-t") 'other-window)
 
-;; "ウィンドウの上下左右切り替え"
-(define-key global-map (kbd "C-<up>") 'windmove-up)
-(define-key global-map (kbd "C-<down>") 'windmove-down)
-(define-key global-map (kbd "C-<left>") 'windmove-left)
-(define-key global-map (kbd "C-<right>") 'windmove-right)
+;; ウィンドウのサイズを変更
+(define-key global-map (kbd "C-<up>") 'enlarge-window)
+(define-key global-map (kbd "C-<down>") 'shrink-window)
+(define-key global-map (kbd "C-<left>") 'shrink-window-horizontally)
+(define-key global-map (kbd "C-<right>") 'enlarge-window-horizontally)
 
 ;; "C-z"でundo
 (define-key global-map (kbd "C-z") 'undo)

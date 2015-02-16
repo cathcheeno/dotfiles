@@ -82,3 +82,12 @@ nvm use v0.10.33
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+### homebrew
+if [ -f ~/.brew_api_token ];then
+    source ~/.brew_api_token
+fi
+
+### php
+# need to 'brew install php56'
+export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
