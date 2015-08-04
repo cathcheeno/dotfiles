@@ -5,7 +5,9 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
+ZSH_THEME="bira"
+
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -91,3 +93,10 @@ fi
 ### php
 # need to 'brew install php56'
 export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
+
+### mongodb
+export PATH=$HOME/mongodb/bin:$PATH
+
+### swiftc
+SDKROOT=$(xcrun --show-sdk-path -sdk macosx)
+alian swiftc="swiftc -sdk $SDKROOT"

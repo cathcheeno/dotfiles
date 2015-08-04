@@ -24,9 +24,22 @@
 (package-initialize)
 
 ;; ==============================
+;;; エンコーディング設定
+;; ==============================
+(prefer-coding-system 'utf-8-unix)
+(setq coding-system-for-read 'utf-8)
+(setq coding-system-for-write 'utf-8)
+
+;; ==============================
 ;;; anything設定
 ;; ==============================
 (require 'anything)
+
+;; ==============================
+;;; editconfig設定
+;; ==============================
+;;(require 'editorconfig)
+;;(setq edconf-exec-path "/usr/local/bin/editorconfig");; Homebrew でインストールしたコマンドのパス
 
 ;; ==============================
 ;;; powerline設定
@@ -179,8 +192,22 @@
 ;; ==============================
 ;;; underline設定
 ;; ==============================
-(global-hl-line-mode)
+;; (global-hl-line-mode)
+;; (setq hl-line-face 'underline)
+
+;; ==============================
+;;; underline設定 高速化
+;; ==============================
+(require 'hl-line)
+(defun global-hl-line-timer-function ()
+  (global-hl-line-unhighlight-all)
+  (let ((global-hl-line-mode t))
+    (global-hl-line-highlight)))
+(setq global-hl-line-timer
+      (run-with-idle-timer 0.03 t 'global-hl-line-timer-function))
 (setq hl-line-face 'underline)
+;; (cancel-timer global-hl-line-timer)
+
 
 ;; ==============================
 ;;; 空白表示
@@ -249,6 +276,9 @@
 ;; 先頭/末尾に移動
 (define-key global-map (kbd "C-c <") 'beginning-of-buffer); バッファの先頭に移動
 (define-key global-map (kbd "C-c >") 'end-of-buffer); バッファの末尾に移動
+
+;; grep
+(define-key global-map (kbd "C-c C-g") 'rgrep)
 
 ;; emmet-expand-line
 (define-key emmet-mode-keymap (kbd "C-c C-e") 'emmet-expand-line); 展開
