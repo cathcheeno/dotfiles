@@ -99,4 +99,4 @@ export PATH=$HOME/mongodb/bin:$PATH
 
 ### swiftc
 SDKROOT=$(xcrun --show-sdk-path -sdk macosx)
-alian swiftc="swiftc -sdk $SDKROOT"
+alias swiftc="swiftc -sdk $SDKROOT"
