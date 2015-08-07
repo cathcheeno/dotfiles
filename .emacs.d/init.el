@@ -36,6 +36,35 @@
 (require 'anything)
 
 ;; ==============================
+;;; magit
+;; ==============================
+(require 'magit)
+;; 文字色変更
+(set-face-foreground 'magit-diff-added "yellow"); 追加行
+(set-face-foreground 'magit-diff-added-highlight "yellow"); 追加行
+(set-face-foreground 'magit-diff-removed "magenta"); 削除行
+(set-face-foreground 'magit-diff-removed-highlight "magenta"); 削除行
+(set-face-foreground 'magit-diff-file-heading "gold"); Diffのファイル名部分
+(set-face-foreground 'magit-diff-file-heading-highlight "gold"); Diffのファイル名部分
+(set-face-foreground 'magit-diff-hunk-heading "white"); Diffのhunk部分
+(set-face-foreground 'magit-diff-hunk-heading-highlight "white"); Diffのhunk部分
+(set-face-foreground 'magit-diff-context "#666666"); 変化無し行
+(set-face-foreground 'magit-diff-context-highlight "#666666"); 変化無し行
+
+;; 背景色変更
+(set-face-background 'magit-diff-file-heading "#003d69"); Diffのファイル名部分
+(set-face-background 'magit-diff-file-heading-highlight "#003d69"); Diffのファイル名部分
+(set-face-background 'magit-diff-hunk-heading "#333333"); Diffのhunk部分
+(set-face-background 'magit-diff-hunk-heading-highlight "#333333"); Diffのhunk部分
+(set-face-background 'magit-diff-context "#111111"); 変化無し行
+(set-face-background 'magit-diff-context-highlight "#111111"); 変化無し行
+(set-face-background 'magit-diff-added "#111111"); 追加行
+(set-face-background 'magit-diff-added-highlight "#111111"); 追加行
+(set-face-background 'magit-diff-removed "#111111"); 削除行
+(set-face-background 'magit-diff-removed-highlight "#111111"); 削除行
+
+
+;; ==============================
 ;;; emmet-mode設定
 ;; ==============================
 (require 'emmet-mode)
@@ -113,11 +142,6 @@
 (setq sml/no-confirm-load-theme t)
 (setq sml/theme 'powerline)
 (sml/setup)
-
-;; ==============================
-;;; magit
-;; ==============================
-(require 'magit)
 
 ;; ==============================
 ;;; オートセーブ設定
@@ -292,3 +316,6 @@
 
 ;; emmet-expand-line
 (define-key emmet-mode-keymap (kbd "C-c C-e") 'emmet-expand-line); 展開
+
+;; magit
+(global-set-key (kbd "C-c C-m") 'magit-status); magit-status
