@@ -36,23 +36,11 @@
 (require 'anything)
 
 ;; ==============================
-;;; editconfig設定
-;; ==============================
-;;(require 'editorconfig)
-;;(setq edconf-exec-path "/usr/local/bin/editorconfig");; Homebrew でインストールしたコマンドのパス
-
-;; ==============================
-;;; powerline設定
-;; ==============================
-(require 'powerline)
-(powerline-default-theme)
-
-;; ==============================
 ;;; emmet-mode設定
 ;; ==============================
 (require 'emmet-mode)
 ;; マークアップ言語全部で使う
-(add-hook 'sgml-mode 'emmet-mode)
+(add-hook 'sgml-mode-hook 'emmet-mode)
 ;; CSSにも使う
 (add-hook 'css-mode-hook 'emmet-mode)
 ;; indentはスペース2つ
@@ -108,6 +96,23 @@
 ;;; php-mode
 ;; ==============================
 (require 'php-mode)
+
+;; ==============================
+;;; swift-mode
+;; ==============================
+(require 'swift-mode)
+
+;; ==============================
+;;; powerline
+;; ==============================
+(require 'powerline)
+
+;; ==============================
+;;; smart-mode-line
+;; ==============================
+(setq sml/no-confirm-load-theme t)
+(setq sml/theme 'powerline)
+(sml/setup)
 
 ;; ==============================
 ;;; オートセーブ設定
