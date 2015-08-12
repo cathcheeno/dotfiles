@@ -62,7 +62,7 @@
 (set-face-background 'magit-diff-added-highlight "#111111"); 追加行
 (set-face-background 'magit-diff-removed "#111111"); 削除行
 (set-face-background 'magit-diff-removed-highlight "#111111"); 削除行
-
+(set-face-background 'magit-section-highlight nil); 選択部分
 
 ;; ==============================
 ;;; emmet-mode設定
