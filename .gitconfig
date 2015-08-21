@@ -1,6 +1,6 @@
 [user]
 name = Go Ohtani
-email = cathcheeno@gmail.com
+	email = otani_go@cyberagent.co.jp
 
 [push]
 default = simple
@@ -19,3 +19,7 @@ st = status
 ls = log --stat
 ll = log --stat --abbrev-commit --graph
 info = remote show origin
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true

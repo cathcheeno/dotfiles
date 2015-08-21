@@ -20,6 +20,7 @@
 ;; パッケージ管理のインストール候補を増やす
 (require 'package)
 (add-to-list 'package-archives'("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives'("melpa-stable" . "http://melpa-stable.milkbox.net/packages/") t)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
@@ -324,3 +325,15 @@
 
 ;; magit
 (global-set-key (kbd "C-c C-m") 'magit-status); magit-status
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(magit-log-arguments (quote ("--graph" "--color" "--decorate" "--follow"))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
