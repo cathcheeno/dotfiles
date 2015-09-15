@@ -51,8 +51,12 @@
 (set-face-foreground 'magit-diff-hunk-heading-highlight "white"); Diffのhunk部分
 (set-face-foreground 'magit-diff-context "#666666"); 変化無し行
 (set-face-foreground 'magit-diff-context-highlight "#666666"); 変化無し行
+(set-face-foreground 'magit-diff-conflict-heading nil); conflict時の自身サイド
+(set-face-foreground 'magit-diff-our nil); conflict時の自身サイド
 (set-face-foreground 'magit-diff-our-highlight nil); conflict時の自身サイド
+(set-face-foreground 'magit-diff-base nil); conflict時のベース
 (set-face-foreground 'magit-diff-base-highlight nil); conflict時のベース
+(set-face-foreground 'magit-diff-their nil); conflict時の他人サイド
 (set-face-foreground 'magit-diff-their-highlight nil); conflict時の他人サイド
 
 ;; 背景色変更
@@ -67,8 +71,12 @@
 (set-face-background 'magit-diff-removed "#111111"); 削除行
 (set-face-background 'magit-diff-removed-highlight "#111111"); 削除行
 (set-face-background 'magit-section-highlight nil); 選択部分
+(set-face-background 'magit-diff-conflict-heading nil); conflict時の自身サイド
+(set-face-background 'magit-diff-our nil); conflict時の自身サイド
 (set-face-background 'magit-diff-our-highlight nil); conflict時の自身サイド
+(set-face-background 'magit-diff-base nil); conflict時のベース
 (set-face-background 'magit-diff-base-highlight nil); conflict時のベース
+(set-face-background 'magit-diff-their nil); conflict時の他人サイド
 (set-face-background 'magit-diff-their-highlight nil); conflict時の他人サイド
 
 ;; ==============================
@@ -326,8 +334,8 @@
 ;; grep
 (define-key global-map (kbd "C-c C-g") 'rgrep)
 
-;; emmet-expand-line
-(define-key emmet-mode-keymap (kbd "C-c C-e") 'emmet-expand-line); 展開
+;; eshell
+(define-key global-map (kbd "C-c C-e") 'eshell)
 
 ;; magit
 (global-set-key (kbd "C-c C-m") 'magit-status); magit-status
