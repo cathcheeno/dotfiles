@@ -102,5 +102,9 @@ SDKROOT=$(xcrun --show-sdk-path -sdk macosx)
 alias swiftc="swiftc -sdk $SDKROOT"
 
 ### go
-export GOPATH=$HOME/.go
-export PATH=$GOPATH/bin:$PATH
+export GOPATH=$HOME/gocode
+export GOOS=darwin
+export GOARCH=amd64
+export GOROOT=/usr/local/opt/go/libexec
+export GOBIN=$GOROOT/bin
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH

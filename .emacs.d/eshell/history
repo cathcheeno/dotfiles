@@ -38,3 +38,19 @@ open dash://Printf
 open dash://go:Printf
 open dash://go:Printf
 open dash-plugin://go:Printf
+which 6g
+which gccgo
+which gc
+which hg
+hg --help
+hg -v
+hg --version
+exit
+go hello.go 
+go run hello.go 
+which 6g
+which gccgo
+go build hello.go 
+ll
+ls -la
+./hello 
