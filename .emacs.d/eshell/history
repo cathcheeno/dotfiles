@@ -18,3 +18,7 @@ git st
 git ll
 ext
 exit
+ll
+cd ../
+pwd
+exit

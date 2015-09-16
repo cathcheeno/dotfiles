@@ -193,7 +193,7 @@
 ;; ==============================
 ;; ユーザー情報
 (setq user-full-name "Go Ohtani")
-(setq user-mail-address "otani_go@cyberagent.co.jp")
+(setq user-mail-address "cathcheeno@gmail.com")
 
 ;; ==============================
 ;;; 言語設定
@@ -294,6 +294,13 @@
 ;; ==============================
 ;; 行末の空白を保存前に削除。
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+
+;; ==============================
+;;; コピペ
+;; ==============================
+;; クリップボードの内容をヤンク可能にする
+(setq x-select-enable-primary t)
 
 ;; ==============================
 ;;; global key map設定
