@@ -32,9 +32,20 @@
 (setq coding-system-for-write 'utf-8)
 
 ;; ==============================
+;;; exec-path-from-shell設定
+;; ==============================
+(exec-path-from-shell-initialize)
+
+;; ==============================
 ;;; anything設定
 ;; ==============================
 (require 'anything)
+
+;; ==============================
+;;; dash-at-point設定
+;; ==============================
+;; go-modeのときのDocsetはgoとする
+;;(add-to-list 'dash-at-point-mode-alist '(go-mode . "go"))
 
 ;; ==============================
 ;;; magit
@@ -342,7 +353,8 @@
 (define-key global-map (kbd "C-c C-e") 'eshell)
 
 ;; dash-at-point
-(define-key global-map (kbd "C-c C-d") 'dash-at-point)
+(define-key global-map (kbd "C-c C-o") 'dash-at-point)
+;;(define-key global-map (kbd "C-c C-d") 'dash-at-point-with-docset); docsetを指定して検索する
 
 ;; magit
 (global-set-key (kbd "C-c C-m") 'magit-status); magit-status

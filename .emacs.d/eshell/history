@@ -22,3 +22,19 @@ ll
 cd ../
 pwd
 exit
+exit
+pwd
+which go
+go run hello.go
+echo $GOROOT
+echo $GOPATH
+go get code.google.com/p/rog-go/exp/cmd/godef
+echo $HOME
+go get code.google.com/p/rog-go/exp/cmd/godef
+echo $GOPATH
+echo $PATH
+echo $GOPATH
+open dash://Printf
+open dash://go:Printf
+open dash://go:Printf
+open dash-plugin://go:Printf

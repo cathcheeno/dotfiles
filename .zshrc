@@ -100,3 +100,7 @@ export PATH=$HOME/mongodb/bin:$PATH
 ### swiftc
 SDKROOT=$(xcrun --show-sdk-path -sdk macosx)
 alias swiftc="swiftc -sdk $SDKROOT"
+
+### go
+export GOPATH=$HOME/.go
+export PATH=$GOPATH/bin:$PATH
