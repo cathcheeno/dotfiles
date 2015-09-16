@@ -310,9 +310,6 @@
 (define-key global-map (kbd "C-c C-x") 'kill-region); カット
 (define-key global-map (kbd "C-c C-v") 'anything-show-kill-ring); kill-ring表示
 
-;; 行全消
-(define-key global-map (kbd "C-c C-d") 'kill-whole-line)
-
 ;; "C-m"にnewline-and-indentを割り当てる
 (define-key global-map (kbd "C-m") 'newline-and-indent)
 
@@ -343,6 +340,9 @@
 
 ;; eshell
 (define-key global-map (kbd "C-c C-e") 'eshell)
+
+;; dash-at-point
+(define-key global-map (kbd "C-c C-d") 'dash-at-point)
 
 ;; magit
 (global-set-key (kbd "C-c C-m") 'magit-status); magit-status
