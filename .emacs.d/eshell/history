@@ -1,56 +1,128 @@
-ll
-pwd
-ls
-git branch
-pwd
-ls -la
-git ll
-exit
-cd ../
-pwd
-ll
-git branc
-git branch
-git branch -vv
-ll
-cd ../
-git st
-git ll
-ext
-exit
-ll
-cd ../
-pwd
-exit
-exit
-pwd
-which go
-go run hello.go
-echo $GOROOT
-echo $GOPATH
-go get code.google.com/p/rog-go/exp/cmd/godef
-echo $HOME
-go get code.google.com/p/rog-go/exp/cmd/godef
-echo $GOPATH
-echo $PATH
-echo $GOPATH
-open dash://Printf
-open dash://go:Printf
-open dash://go:Printf
-open dash-plugin://go:Printf
-which 6g
-which gccgo
-which gc
-which hg
-hg --help
-hg -v
-hg --version
-exit
-go hello.go 
-go run hello.go 
-which 6g
-which gccgo
-go build hello.go 
-ll
-ls -la
+go run hello.go -n true arg1 arg2 arg3
+go run hello.go -n false arg1 arg2 arg3
+go run hello.go -n arg1 arg2 arg3
+go run hello.go arg1 arg2 arg3
+go run hello.go arg1 arg2 arg3 -n
+go run hello.go -n arg1 arg2 arg3
+go run hello.go arg1 arg2 arg3
 ./hello 
+pwd
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go build hello.go
+./hello 
+./hello 
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+got run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+exit
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+9 20
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+pwd
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+go run hello.go
+cd ../../
+ll
+cd ../
+npm run jshint
+exit
+exit
+exit
+ll
+ls
+mkdir files
+cd files/
+wget http://aos.a4c.jp/paris/p/stat/a/20150925161857/c/paris/mypage/index.js
+ls
+exit
+wget http://aos.a4c.jp/paris/p/stat/a/20150925161857/c/vendor/backbone-min.js
+ls
+exit
+wget http://aos.a4c.jp/paris/p/stat/a/20150925161857/c/paris/core/bootstrap.js
+ls
+exit
+wget http://aos.a4c.jp/paris/p/stat/a/20150925161857/c/paris/core/index.js
+ls
+exit
+wget help
+wget -h
+wget ttp://aos.a4c.jp/paris/p/stat/a/20150925161857/c/paris/core/components/guildbattle/index.js guildbattle.js
+ls
+wget ttp://aos.a4c.jp/paris/p/stat/a/20150925161857/c/paris/core/components/guildbattle/index.js
+ls
+wget http://aos.a4c.jp/paris/p/stat/a/20150925161857/c/paris/core/components/guildbattle/index.js guildbattle.js
+ls
+wget http://aos.a4c.jp/paris/p/stat/a/20150925161857/c/paris/core/components/guildbattle/index.js
+ls
+exit
+ls /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer
+ls /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/
+exti
+exit

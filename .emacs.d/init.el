@@ -127,7 +127,9 @@
                                    (auto-complete-mode t)
                                    ))
 (require 'auto-complete-config)
+(global-auto-complete-mode t)
 (ac-config-default)
+(add-to-list 'ac-modes 'swift-mode)
 
 ;; ==============================
 ;;; color-theme設定
@@ -155,7 +157,7 @@
 ;; ==============================
 ;;; swift-mode
 ;; ==============================
-;(require 'swift-mode)
+(require 'swift-mode)
 
 ;; ==============================
 ;;; powerline
@@ -229,6 +231,12 @@
 (require 'linum)
 (global-linum-mode t)
 (setq linum-format "%4d ")
+
+;; ==============================
+;;; 列番号
+;; ==============================
+(line-number-mode t)
+(column-number-mode t)
 
 ;; ==============================
 ;;; タブ設定
