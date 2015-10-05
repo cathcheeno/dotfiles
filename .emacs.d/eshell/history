@@ -1,26 +1,3 @@
-go run hello.go -n true arg1 arg2 arg3
-go run hello.go -n false arg1 arg2 arg3
-go run hello.go -n arg1 arg2 arg3
-go run hello.go arg1 arg2 arg3
-go run hello.go arg1 arg2 arg3 -n
-go run hello.go -n arg1 arg2 arg3
-go run hello.go arg1 arg2 arg3
-./hello 
-pwd
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go build hello.go
-./hello 
-./hello 
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
 go run hello.go
 go run hello.go
 go run hello.go
@@ -125,4 +102,27 @@ exit
 ls /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer
 ls /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/
 exti
+exit
+open .
+exit
+cd ../../
+ll
+cd ../../
+npm run jshint
+exit
+npm run jshint
+exit
+cd ../../
+cd ../
+pwd
+npm run jshint
+exit
+cd ../../
+npm run jshint
+354 |                                        location.reload()
+npm run jshint
+exit
+cd ../../
+npm run jshint
+git branch
 exit
