@@ -1,128 +1,128 @@
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-got run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-exit
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-9 20
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-pwd
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-go run hello.go
-cd ../../
+ls
+rm myCommandLineTool 
+go build mia
+go build main.go 
+ls
+./main
+./main -lang
+./main -v
+./main --lang
+./main --lang "english"
+./main --lang spanish
+./main go --lang spanish
+./main go --lang spanish
+./main --lang spanish go
+./main --lang spanish myName
+./main "go" --lang spanish myName
+./main "go" --lang spanish
+./main 'go' --lang spanish
+./main --lang spanish 'go'
+./main --lang spanish who?
+go build main.go
+ls
+./main
+./main -h
+go build main.go
+./main -h
+eecho $LEGACY_COMPAT_LANG
+echo $LEGACY_COMPAT_LANG
+echo $APP_LANG
+echo $LANG
+echo $LEGACY_COMPAT_LANG
+go build main.go
+./main -h
+./main add a
+./main complete c
+./main help template
+./main help
+./main a a
+./main a alias?
+./main template add a
+./main template add this is subcommand
+./main template add "this is subcommand"
+./main template remove "this is subcommand"
+go build main.go
+go build main.go
+go build main.go
+./main -h
+./main --generate-bash-completion
+./main add a
+ls
+ls
+mv LICENSE LICENSE.txt
+ls
+mv LICENSE.txt LICENSE
+ls
+printenv
+PATH=/Users/a11937/gocode/bin:/usr/local/opt/go/libexec/bin:/Users/a11937/mongodb/bin:/usr/local/opt/php56/bin:/usr/local/heroku/bin:/Users/a11937/.nvm/v0.10.33/bin:/Users/a11937/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Users/a11937/gocode/bin:/usr/local/opt/go/libexec/bin:/Users/a11937/mongodb/bin:/usr/local/opt/php56/bin:/usr/local/heroku/bin:/Users/a11937/bin
+which main
+which mai
+ls
+go build main.go 
+ls
+./main.go:30: splitter declared and not used
+go build main.go 
+./main 
+./main -p aaa
+./main -path aaa
+./main -path aaa -s =
+printenv
+go build main.go
+go build main.go
+./main 
+go build main.go
+go build main.go
+./main 
+./main 
+go build main.go
+go build main.go
+./main 
+go build main.go
+go build main.go
+./main 
+go build main.go
+go build main.go
+./main 
+go build main.go
+go build main.go
+./main 
+./main -p path
+go build main.go
+go build main.go
+./main 
+go build main.go
+./main 
+go build main.go
+./main 
+printenv
+./main -p NODE_PATH
+./main -p Apple_PubSub_Socket_Render -s /
+./main -p hoge
+./main -p hoge -s aaa
+go build main.go
+./main 
+go build main.go
+./main 
+go build main.go
+./main 
+go build main.go
+./main 
+go build main.go
+./main 
+go build main.go
+./main 
+./main -p aaa
+./main -p aaa
+go test
+go test -cover
+go test --cover
+go test
+go test -cover
+go test
+go test -cover
+go test
 ll
-cd ../
-npm run jshint
-exit
-exit
-exit
-ll
 ls
-mkdir files
-cd files/
-wget http://aos.a4c.jp/paris/p/stat/a/20150925161857/c/paris/mypage/index.js
+rm main
 ls
-exit
-wget http://aos.a4c.jp/paris/p/stat/a/20150925161857/c/vendor/backbone-min.js
-ls
-exit
-wget http://aos.a4c.jp/paris/p/stat/a/20150925161857/c/paris/core/bootstrap.js
-ls
-exit
-wget http://aos.a4c.jp/paris/p/stat/a/20150925161857/c/paris/core/index.js
-ls
-exit
-wget help
-wget -h
-wget ttp://aos.a4c.jp/paris/p/stat/a/20150925161857/c/paris/core/components/guildbattle/index.js guildbattle.js
-ls
-wget ttp://aos.a4c.jp/paris/p/stat/a/20150925161857/c/paris/core/components/guildbattle/index.js
-ls
-wget http://aos.a4c.jp/paris/p/stat/a/20150925161857/c/paris/core/components/guildbattle/index.js guildbattle.js
-ls
-wget http://aos.a4c.jp/paris/p/stat/a/20150925161857/c/paris/core/components/guildbattle/index.js
-ls
-exit
-ls /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer
-ls /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/
-exti
-exit
-open .
-exit
-cd ../../
-ll
-cd ../../
-npm run jshint
-exit
-npm run jshint
-exit
-cd ../../
-cd ../
-pwd
-npm run jshint
-exit
-cd ../../
-npm run jshint
-354 |                                        location.reload()
-npm run jshint
-exit
-cd ../../
-npm run jshint
-git branch
 exit
