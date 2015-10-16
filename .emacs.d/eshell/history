@@ -1,128 +1,128 @@
+ls ~/gocode/src/
+ls ~/gocode/src/github.com/
+which eps
+go install
+ls ~/gocode/
+ls ~/gocode/bin
 ls
-rm myCommandLineTool 
-go build mia
-go build main.go 
-ls
-./main
-./main -lang
-./main -v
-./main --lang
-./main --lang "english"
-./main --lang spanish
-./main go --lang spanish
-./main go --lang spanish
-./main --lang spanish go
-./main --lang spanish myName
-./main "go" --lang spanish myName
-./main "go" --lang spanish
-./main 'go' --lang spanish
-./main --lang spanish 'go'
-./main --lang spanish who?
-go build main.go
-ls
-./main
-./main -h
-go build main.go
-./main -h
-eecho $LEGACY_COMPAT_LANG
-echo $LEGACY_COMPAT_LANG
-echo $APP_LANG
-echo $LANG
-echo $LEGACY_COMPAT_LANG
-go build main.go
-./main -h
-./main add a
-./main complete c
-./main help template
-./main help
-./main a a
-./main a alias?
-./main template add a
-./main template add this is subcommand
-./main template add "this is subcommand"
-./main template remove "this is subcommand"
-go build main.go
-go build main.go
-go build main.go
-./main -h
-./main --generate-bash-completion
-./main add a
-ls
-ls
-mv LICENSE LICENSE.txt
-ls
-mv LICENSE.txt LICENSE
-ls
-printenv
-PATH=/Users/a11937/gocode/bin:/usr/local/opt/go/libexec/bin:/Users/a11937/mongodb/bin:/usr/local/opt/php56/bin:/usr/local/heroku/bin:/Users/a11937/.nvm/v0.10.33/bin:/Users/a11937/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Users/a11937/gocode/bin:/usr/local/opt/go/libexec/bin:/Users/a11937/mongodb/bin:/usr/local/opt/php56/bin:/usr/local/heroku/bin:/Users/a11937/bin
-which main
-which mai
-ls
-go build main.go 
-ls
-./main.go:30: splitter declared and not used
-go build main.go 
-./main 
-./main -p aaa
-./main -path aaa
-./main -path aaa -s =
-printenv
-go build main.go
-go build main.go
-./main 
-go build main.go
-go build main.go
-./main 
-./main 
-go build main.go
-go build main.go
-./main 
-go build main.go
-go build main.go
-./main 
-go build main.go
-go build main.go
-./main 
-go build main.go
-go build main.go
-./main 
-./main -p path
-go build main.go
-go build main.go
-./main 
-go build main.go
-./main 
-go build main.go
-./main 
-printenv
-./main -p NODE_PATH
-./main -p Apple_PubSub_Socket_Render -s /
-./main -p hoge
-./main -p hoge -s aaa
-go build main.go
-./main 
-go build main.go
-./main 
-go build main.go
-./main 
-go build main.go
-./main 
-go build main.go
-./main 
-go build main.go
-./main 
-./main -p aaa
-./main -p aaa
-go test
-go test -cover
-go test --cover
-go test
-go test -cover
-go test
-go test -cover
-go test
+cd
+cd gocode/
 ll
 ls
-rm main
+cd src/
 ls
-exit
+go install
+cd github.com/
+ls
+cd cathcheeno/
+ls
+go install envPathSplitter/
+go install
+ll
+cd envPathSplitter/
+go install
+cd ../../../
+ls
+cd ../
+ls
+open .
+go get github.com/cathcheeno/envPathSplitter
+which envPathSplitter
+ls /usr/local/opt/go/libexec/bin
+myCommandLinetool
+myCommandLineTool
+cd practice/chapter2/
+ls
+cd chat/
+ls
+go get github.com/matryer/goblueprints/chapter1/trace
+go get github.com/stretchr/gomniauth/providers/facebook
+ls
+mkdir templates
+cd templates/
+cd ../
+cp ../../../samples/chapter2/chat/templates/chat.html templates/chat.html
+cd practice/chapter2/
+ls
+cd chat/
+ls
+cd ../../
+cd../
+cd ../samples/chapter4/
+ls
+tree
+cd ../../
+cd practice/
+ls
+mkdir chapter4
+ls
+cd chapter4/
+cd
+cd gocode/
+ls
+cd src/
+ls
+mkdir sprinkle
+ls
+cd sprinkle/
+ls
+go build -o sprinkle
+ls
+./sprinkle 
+./sprinkle 
+echo "chat" | ./sprinkle 
+echo "chat" | ./sprinkle 
+echo "chat" | ./sprinkle 
+echo "chat" | ./sprinkle 
+echo "chat" | ./sprinkle 
+echo "chat" | ./sprinkle 
+cd ../
+ls
+mkdir domainify
+cd domainify/
+go build -o domainify
+go build -p domainify
+ls
+go build -o domainify
+ls
+./domainify 
+cd ../
+ls
+./sprinkle/sprinkle | ./domainify/domainify 
+./sprinkle/sprinkle
+./sprinkle/sprinkle | ./domainify/domainify
+echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
+echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
+echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
+echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
+echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
+echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
+echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
+echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
+echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
+echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
+echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
+echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
+echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
+echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
+echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
+echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
+echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
+echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
+echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
+echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
+./sprinkle/sprinkle | ./domainify/domainify 
+./sprinkle/sprinkle | ./domainify/domainify 
+./sprinkle/sprinkle | ./domainify/domainify 
+./sprinkle/sprinkle | ./domainify/domainify 
+mkdir coolify
+cd coolify/
+go build -o coolify
+go build -o coolify
+./coolify 
+export BHT_APIKEY=de04fcd3763d490dbfb3212dd1d6df30
+echo $BHT_APIKEY
+cd ../
+mkdir thesaurus
+mkdir synonyms
+mkdir available
