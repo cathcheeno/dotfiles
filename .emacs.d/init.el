@@ -293,6 +293,8 @@
 (set-face-background 'whitespace-space nil)
 (set-face-foreground 'whitespace-newline "blue")
 (set-face-background 'whitespace-newline nil)
+(set-face-foreground 'whitespace-tab "blue")
+(set-face-background 'whitespace-tab nil)
 (global-whitespace-mode 1)
 
 ;; ==============================
