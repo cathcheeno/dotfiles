@@ -93,13 +93,13 @@
 ;; ==============================
 ;;; emmet-mode設定
 ;; ==============================
-(require 'emmet-mode)
+;(require 'emmet-mode)
 ;; マークアップ言語全部で使う
-(add-hook 'sgml-mode-hook 'emmet-mode)
+;(add-hook 'sgml-mode-hook 'emmet-mode)
 ;; CSSにも使う
-(add-hook 'css-mode-hook 'emmet-mode)
+;(add-hook 'css-mode-hook 'emmet-mode)
 ;; indentはスペース2つ
-(add-hook 'emmet-mode-hook (lambda () (setq emmet-indentation 2)))
+;(add-hook 'emmet-mode-hook (lambda () (setq emmet-indentation 2)))
 
 ;; ==============================
 ;;; ag設定
@@ -109,6 +109,11 @@
 (setq ag-highlight-search t)
 ;; 検索用バッファを使い回す(検索ごとに新バッファを作らない)
 (setq ag-reuse-buffers t)
+
+;; ==============================
+;;; editorconfig
+;; ==============================
+(setq edconf-exec-path "/usr/local/bin/editorconfig"); Homebrew でインストールしたコマンドのパス
 
 ;; ==============================
 ;;; wgrep設定
@@ -142,7 +147,18 @@
 ;; ==============================
 ;;; js2-mode
 ;; ==============================
-(autoload 'js2-mode "js2-mode" nil t)
+;(autoload 'js2-mode "js2-mode" nil t)
+
+;; ==============================
+;;; web-mode
+;; ==============================
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
+(setq web-mode-content-types-alist
+      '(("jsx" . "\\.js[x]?\\'")))
+(set-face-foreground 'web-mode-html-tag-bracket-face "#cccccc")
+(add-to-list 'web-mode-comment-formats '("js" . "// "))
 
 ;; ==============================
 ;;; stylus-mode
@@ -202,6 +218,12 @@
 ;;; コードフォールディング設定
 ;; ==============================
 (add-hook 'js-mode-hook
+          (lambda ()
+            ;; Scan the file for nested code blocks
+            (imenu-add-menubar-index)
+            ;; Activate the folding mode
+            (hs-minor-mode t)))
+(add-hook 'web-mode-hook
           (lambda ()
             ;; Scan the file for nested code blocks
             (imenu-add-menubar-index)
@@ -283,7 +305,6 @@
 (setq hl-line-face 'underline)
 ;; (cancel-timer global-hl-line-timer)
 
-
 ;; ==============================
 ;;; 空白表示
 ;; ==============================
@@ -322,7 +343,6 @@
 ;; ==============================
 ;; 行末の空白を保存前に削除。
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
-
 
 ;; ==============================
 ;;; コピペ
@@ -368,6 +388,11 @@
 
 ;; eshell
 (define-key global-map (kbd "C-c C-e") 'eshell)
+(define-key web-mode-map (kbd "C-c C-e") 'eshell)
+
+;; only with web-mode
+(define-key web-mode-map (kbd "C-;") nil)
+(define-key web-mode-map (kbd "C-c C-;") 'web-mode-comment-or-uncomment)
 
 ;; dash-at-point
 (define-key global-map (kbd "C-c C-o") 'dash-at-point)

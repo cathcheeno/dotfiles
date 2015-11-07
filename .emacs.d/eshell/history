@@ -1,128 +1,128 @@
-ls ~/gocode/src/
-ls ~/gocode/src/github.com/
-which eps
-go install
-ls ~/gocode/
-ls ~/gocode/bin
+export SP_TWITTER_ACCESSTOKEN=3282386264-WDqylxxEg968XErHae084gA3zVFVuBDWICiNB42
+export SP_TWITTER_ACCESSSECRET=8rQHeUGOLwxGhOATqy8YmZrDNUc1ncufVnTTWn2AQU9bN
 ls
+open s/breeding/i18n/ja.js 
+cd 
+cd gocode/src/
+ls
+cd socialpoll/
+ls
+mkdir counter
+cd ../
+ls
+rm -rf socialpoll/
+exit
 cd
 cd gocode/
-ll
 ls
 cd src/
 ls
-go install
+mkdir meander
+cd meander/
+which golint
+golint
+go get -u github.com/golang/lint/golint
+ls
+golint .
+golint .
+golint .
+golint .
+ls
+mkdir cmd
+cd cmd/
+go run main.go
+go run main.go 
+go run main.go 
+golint .
+cd ../
+golint .
+golint .
+cd cmd/
+go run main.go 
+golint ../
+golint ../
+golint ../
+cd 
+cd gocode/src/meander/
+cd cmd/
+go build -o meanderapi
+go build -o meanderapi
+./meanderapi 
+cd ../../
+ls
+ll
+ls
+ls -la
+rm -rf meander/
+ls
+mkdir backup
+ls
+cd backup/
+ls
+mkdir cmds
+cd cmds/
+mkdir backup
+ls
+mkdir backupd
+pwd
+ls
+cd src/
+ls
+mkdir cathcheeno
+ls
+rm -rf backup/
+ls
+cd github.com/
+ls
+cd codegangsta/
+ls
+ls -la
+cd cli/
+ls
+ls -la
+cd
+cd gocode/src/cathcheeno/
+cd src/cathcheeno/
+go run main.go 
+go run main.go 
+ls
+cat 1.txt 
+ls
+echo $GOPATH
+ls
+ls pkg/
+ls pkg/darwin_amd64/github.com/
+ls pkg/darwin_amd64/github.com/matryer/goblueprints/chapter1
+go env
+go list
+ls
+cd src/
+ls
+rm -rf cathcheeno/
+ls
 cd github.com/
 ls
 cd cathcheeno/
 ls
-go install envPathSplitter/
-go install
-ll
-cd envPathSplitter/
-go install
-cd ../../../
-ls
-cd ../
-ls
+mkdir sample
+which locale
+locale -a
+exit
+which editorconfig
+exit
+npm -v
+exit
 open .
-go get github.com/cathcheeno/envPathSplitter
-which envPathSplitter
-ls /usr/local/opt/go/libexec/bin
-myCommandLinetool
-myCommandLineTool
-cd practice/chapter2/
+exit
+npm install --save-dev gulp
+exit
+ll
 ls
-cd chat/
-ls
-go get github.com/matryer/goblueprints/chapter1/trace
-go get github.com/stretchr/gomniauth/providers/facebook
-ls
-mkdir templates
-cd templates/
-cd ../
-cp ../../../samples/chapter2/chat/templates/chat.html templates/chat.html
-cd practice/chapter2/
-ls
-cd chat/
-ls
-cd ../../
-cd../
-cd ../samples/chapter4/
+mkdir src
 ls
 tree
-cd ../../
-cd practice/
 ls
-mkdir chapter4
-ls
-cd chapter4/
-cd
-cd gocode/
-ls
-cd src/
-ls
-mkdir sprinkle
-ls
-cd sprinkle/
-ls
-go build -o sprinkle
-ls
-./sprinkle 
-./sprinkle 
-echo "chat" | ./sprinkle 
-echo "chat" | ./sprinkle 
-echo "chat" | ./sprinkle 
-echo "chat" | ./sprinkle 
-echo "chat" | ./sprinkle 
-echo "chat" | ./sprinkle 
-cd ../
-ls
-mkdir domainify
-cd domainify/
-go build -o domainify
-go build -p domainify
-ls
-go build -o domainify
-ls
-./domainify 
-cd ../
-ls
-./sprinkle/sprinkle | ./domainify/domainify 
-./sprinkle/sprinkle
-./sprinkle/sprinkle | ./domainify/domainify
-echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
-echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
-echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
-echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
-echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
-echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
-echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
-echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
-echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
-echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
-echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
-echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
-echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
-echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
-echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
-echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
-echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
-echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
-echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
-echo "hoge" | ./sprinkle/sprinkle | ./domainify/domainify 
-./sprinkle/sprinkle | ./domainify/domainify 
-./sprinkle/sprinkle | ./domainify/domainify 
-./sprinkle/sprinkle | ./domainify/domainify 
-./sprinkle/sprinkle | ./domainify/domainify 
-mkdir coolify
-cd coolify/
-go build -o coolify
-go build -o coolify
-./coolify 
-export BHT_APIKEY=de04fcd3763d490dbfb3212dd1d6df30
-echo $BHT_APIKEY
-cd ../
-mkdir thesaurus
-mkdir synonyms
-mkdir available
+mkdir src/js
+exit
+exit
+exit
