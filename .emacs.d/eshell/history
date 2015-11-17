@@ -1,10 +1,3 @@
-export SP_TWITTER_ACCESSTOKEN=3282386264-WDqylxxEg968XErHae084gA3zVFVuBDWICiNB42
-export SP_TWITTER_ACCESSSECRET=8rQHeUGOLwxGhOATqy8YmZrDNUc1ncufVnTTWn2AQU9bN
-ls
-open s/breeding/i18n/ja.js 
-cd 
-cd gocode/src/
-ls
 cd socialpoll/
 ls
 mkdir counter
@@ -125,4 +118,11 @@ ls
 mkdir src/js
 exit
 exit
+exit
+exit
+ll
+ls
+chmod 777 a.txt 
+ls -la
+pwd
 exit

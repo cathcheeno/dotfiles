@@ -114,6 +114,8 @@
 ;;; editorconfig
 ;; ==============================
 (setq edconf-exec-path "/usr/local/bin/editorconfig"); Homebrew でインストールしたコマンドのパス
+(load "editorconfig")
+(editorconfig-mode 1)
 
 ;; ==============================
 ;;; wgrep設定
@@ -147,18 +149,31 @@
 ;; ==============================
 ;;; js2-mode
 ;; ==============================
-;(autoload 'js2-mode "js2-mode" nil t)
+;;(autoload 'js2-mode "js2-mode" nil t)
+
+;; ==============================
+;;; js2-jsx-mode
+;; ==============================
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-jsx-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx\\'" . js2-jsx-mode))
 
 ;; ==============================
 ;;; web-mode
 ;; ==============================
-(require 'web-mode)
-(add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
-(setq web-mode-content-types-alist
-      '(("jsx" . "\\.js[x]?\\'")))
-(set-face-foreground 'web-mode-html-tag-bracket-face "#cccccc")
-(add-to-list 'web-mode-comment-formats '("js" . "// "))
+;(require 'web-mode)
+;(add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
+;(add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
+;(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+;(add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
+;(setq web-mode-content-types-alist
+;      '(("jsx" . "\\.js[x]?\\'")))
+;(set-face-foreground 'web-mode-html-tag-bracket-face "#cccccc")
+;(add-to-list 'web-mode-comment-formats '("js" . "// "))
+;(setq web-mode-indent-style 2)
+;(setq web-mode-markup-indent-offset 2)
+;(setq web-mode-css-indent-offset 2)
+;(setq web-mode-code-indent-offset 2)
+
 
 ;; ==============================
 ;;; stylus-mode
@@ -223,12 +238,12 @@
             (imenu-add-menubar-index)
             ;; Activate the folding mode
             (hs-minor-mode t)))
-(add-hook 'web-mode-hook
-          (lambda ()
-            ;; Scan the file for nested code blocks
-            (imenu-add-menubar-index)
-            ;; Activate the folding mode
-                        (hs-minor-mode t)))
+;(add-hook 'web-mode-hook
+;          (lambda ()
+;            ;; Scan the file for nested code blocks
+;            (imenu-add-menubar-index)
+;            ;; Activate the folding mode
+;                        (hs-minor-mode t)))
 
 ;; ==============================
 ;;; ユーザ情報
@@ -388,11 +403,11 @@
 
 ;; eshell
 (define-key global-map (kbd "C-c C-e") 'eshell)
-(define-key web-mode-map (kbd "C-c C-e") 'eshell)
+;(define-key web-mode-map (kbd "C-c C-e") 'eshell)
 
 ;; only with web-mode
-(define-key web-mode-map (kbd "C-;") nil)
-(define-key web-mode-map (kbd "C-c C-;") 'web-mode-comment-or-uncomment)
+;(define-key web-mode-map (kbd "C-;") nil)
+;(define-key web-mode-map (kbd "C-c ;") 'web-mode-comment-or-uncomment)
 
 ;; dash-at-point
 (define-key global-map (kbd "C-c C-o") 'dash-at-point)
