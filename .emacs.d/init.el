@@ -127,18 +127,6 @@
                            (wgrep-ag-setup)))
 
 ;; ==============================
-;;; auto-complete設定
-;; ==============================
-(add-hook 'emacs-lisp-mode-hook '(lambda ()
-                                   (require 'auto-complete)
-                                   (auto-complete-mode t)
-                                   ))
-(require 'auto-complete-config)
-(global-auto-complete-mode t)
-(ac-config-default)
-(add-to-list 'ac-modes 'swift-mode)
-
-;; ==============================
 ;;; color-theme設定
 ;; ==============================
 ;; color-themeをHoberに変更
@@ -201,6 +189,20 @@
 (setq sml/no-confirm-load-theme t)
 (setq sml/theme 'powerline)
 (sml/setup)
+
+;; ==============================
+;;; auto-complete設定
+;; ==============================
+(add-hook 'emacs-lisp-mode-hook '(lambda ()
+                                   (require 'auto-complete)
+                                   (auto-complete-mode t)
+                                   ))
+(require 'auto-complete-config)
+(global-auto-complete-mode t)
+(ac-config-default)
+(add-to-list 'ac-modes 'swift-mode)
+(add-to-list 'ac-modes 'js2-mode)
+(add-to-list 'ac-modes 'js2-jsx-mode)
 
 ;; ==============================
 ;;; windowのactive/inactive状態に応じて、モードラインをスタイルを変更する
