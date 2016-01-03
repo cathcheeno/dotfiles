@@ -94,7 +94,7 @@ fi
 
 ### php
 # need to 'brew install php56'
-export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
+# export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
 
 ### mongodb
 export PATH=$HOME/mongodb/bin:$PATH
