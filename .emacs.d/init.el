@@ -135,6 +135,13 @@
   (color-theme-hober))
 
 ;; ==============================
+;;; Patch 24.5's sgml-mode with the new attribute offset feature.
+;; ==============================
+(require 'load-relative)
+(load-relative "./sgml-mode-patch.el")
+(require 'sgml-mode)
+
+;; ==============================
 ;;; js2-mode
 ;; ==============================
 ;;(autoload 'js2-mode "js2-mode" nil t)
