@@ -19,6 +19,11 @@ st = status
 ls = log --stat
 ll = log --stat --abbrev-commit --graph
 info = remote show origin
+
+[pager]
+diff = diff-so-fancy | less --tabs=4 -RFX
+show = diff-so-fancy | less --tabs=4 -RFX
+
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
