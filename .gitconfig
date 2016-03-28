@@ -1,28 +1,49 @@
 [user]
-name = Go Ohtani
+	name = Go Ohtani
 	email = otani_go@cyberagent.co.jp
 
 [push]
-default = simple
+	default = simple
 
 [core]
-excludesfile = ~/.gitignore_global
+	excludesfile = ~/.gitignore_global
 
 [color]
-diff = auto
-branch = auto
-interactive = auto
-grep = auto
+	ui = always
+
+[color "diff"]
+	meta = yellow bold
+	commit = green bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = "red bold 52"
+	newNormal = "green bold"
+	newHighlight = "green bold 22"
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
 
 [alias]
-st = status
-ls = log --stat
-ll = log --stat --abbrev-commit --graph
-info = remote show origin
+	st = status
+	ls = log --stat
+	ll = log --stat --abbrev-commit --graph
+	info = remote show origin
 
 [pager]
-diff = diff-so-fancy | less --tabs=4 -RFX
-show = diff-so-fancy | less --tabs=4 -RFX
+	diff = diff-so-fancy | less --tabs=4 -RFX
+	show = diff-so-fancy | less --tabs=4 -RFX
 
 [filter "lfs"]
 	clean = git-lfs clean %f
