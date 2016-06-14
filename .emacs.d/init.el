@@ -153,6 +153,18 @@
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . js2-jsx-mode))
 
 ;; ==============================
+;;; yaml-mode
+;; ==============================
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+
+;; ==============================
+;;; ansible minor mode
+;; ==============================
+(require 'ansible)
+(add-hook 'yaml-mode-hook '(lambda () (ansible 1)))
+
+;; ==============================
 ;;; web-mode
 ;; ==============================
 ;(require 'web-mode)

@@ -116,3 +116,7 @@ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 export PYENV_ROOT=$HOME/.pyenv
 export PATH=$PYENV_ROOT/bin:$PATH
 eval "$(pyenv init -)"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/a11937/.sdkman"
+[[ -s "/Users/a11937/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/a11937/.sdkman/bin/sdkman-init.sh"

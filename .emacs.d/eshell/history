@@ -1,46 +1,3 @@
-which golint
-golint
-go get -u github.com/golang/lint/golint
-ls
-golint .
-golint .
-golint .
-golint .
-ls
-mkdir cmd
-cd cmd/
-go run main.go
-go run main.go 
-go run main.go 
-golint .
-cd ../
-golint .
-golint .
-cd cmd/
-go run main.go 
-golint ../
-golint ../
-golint ../
-cd 
-cd gocode/src/meander/
-cd cmd/
-go build -o meanderapi
-go build -o meanderapi
-./meanderapi 
-cd ../../
-ls
-ll
-ls
-ls -la
-rm -rf meander/
-ls
-mkdir backup
-ls
-cd backup/
-ls
-mkdir cmds
-cd cmds/
-mkdir backup
 ls
 mkdir backupd
 pwd
@@ -126,3 +83,46 @@ npm install --save-dev electron-prebuilt
 exit
 cp .editorconfig ~/Desktop/node_cookbook/app/.editorconfig
 exit
+cd
+cd Desktop/gradle_test/
+ll
+which gradle
+gradle -q hello
+gradle hello
+rm builddd.gradle
+grdle hello
+gradle hello
+gradle hello2
+gradle upper
+gradle count
+gradle intro
+gradle task1
+gradle task0
+gradle task0
+gradle hello
+gradle hello
+gradle printTaskProperties
+This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.12/userguide/gradle_daemon.html
+gradle other
+gradle other
+gradle
+gradle clean run
+Total time: 1.286 secs
+gradle distribution
+gradle distribution
+gradle release
+gradle tasks
+gradle buildEnvironment
+gradle tasks --all
+gradle distribution
+gradle tasks --all
+gradle tasks
+gradle projects
+gradle dependencies
+gradle dependencies
+]]
+gradle -m dist
+gradle --gui
+gradle check
+gradle -q check
+gradle check
