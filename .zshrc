@@ -81,8 +81,8 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 source ~/.nvm/nvm.sh
 #nvm alias default 5.0.0
 #nvm use v5.0.0
-nvm alias default 4.2.3
-nvm use v4.2.3
+nvm alias default 6.9.1
+nvm use v6.9.1
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"

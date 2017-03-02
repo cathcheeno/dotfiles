@@ -1,5 +1,3 @@
-ls
-mkdir backupd
 pwd
 ls
 cd src/
@@ -126,3 +124,5 @@ gradle --gui
 gradle check
 gradle -q check
 gradle check
+q
+exit

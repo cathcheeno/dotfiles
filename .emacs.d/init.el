@@ -168,7 +168,8 @@
 ;; ==============================
 ;;; web-mode
 ;; ==============================
-;(require 'web-mode)
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.tag\\'" . web-mode))
 ;(add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
 ;(add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
 ;(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
@@ -181,6 +182,7 @@
 ;(setq web-mode-markup-indent-offset 2)
 ;(setq web-mode-css-indent-offset 2)
 ;(setq web-mode-code-indent-offset 2)
+
 
 
 ;; ==============================
@@ -391,40 +393,42 @@
 ;;; global key map設定
 ;; ==============================
 ;; コピペ
-(define-key global-map (kbd "C-c C-c") 'kill-ring-save); コピー
-(define-key global-map (kbd "C-c C-x") 'kill-region); カット
-(define-key global-map (kbd "C-c C-v") 'anything-show-kill-ring); kill-ring表示
+(require 'bind-key)
+(bind-key* "C-c C-c" 'kill-ring-save); コピー
+(bind-key* "C-c C-x" 'kill-region); カット
+(bind-key* "C-c C-v" 'anything-show-kill-ring); kill-ring表示
+(bind-key* "C-c C-r" 'query-replace); 置換
 
 ;; "C-m"にnewline-and-indentを割り当てる
-(define-key global-map (kbd "C-m") 'newline-and-indent)
+(bind-key "C-m" 'newline-and-indent)
 
 ;; "C-t"でウィンドウを切り替える
-(define-key global-map (kbd "C-t") 'other-window)
+(bind-key "C-t" 'other-window)
 
 ;; ウィンドウのサイズを変更
-(define-key global-map (kbd "C-<up>") 'enlarge-window)
-(define-key global-map (kbd "C-<down>") 'shrink-window)
-(define-key global-map (kbd "C-<left>") 'shrink-window-horizontally)
-(define-key global-map (kbd "C-<right>") 'enlarge-window-horizontally)
+(bind-key* "C-<up>" 'enlarge-window)
+(bind-key* "C-<down>" 'shrink-window)
+(bind-key* "C-<left>" 'shrink-window-horizontally)
+(bind-key* "C-<right>" 'enlarge-window-horizontally)
 
 ;; "C-z"でundo
-(define-key global-map (kbd "C-z") 'undo)
+(bind-key* "C-z" 'undo)
 
 ;; ag検索
-(define-key global-map (kbd "C-c C-g") 'ag)
+(bind-key* "C-c C-g" 'ag)
 
 ;; コードフォールディング
 (global-set-key (kbd "C-o") 'hs-toggle-hiding)
 
 ;; 先頭/末尾に移動
-(define-key global-map (kbd "C-c <") 'beginning-of-buffer); バッファの先頭に移動
-(define-key global-map (kbd "C-c >") 'end-of-buffer); バッファの末尾に移動
+(bind-key* "C-c <" 'beginning-of-buffer); バッファの先頭に移動
+(bind-key* "C-c >" 'end-of-buffer); バッファの末尾に移動
 
 ;; grep
-(define-key global-map (kbd "C-c C-g") 'rgrep)
+(bind-key* "C-c C-g" 'rgrep)
 
 ;; eshell
-(define-key global-map (kbd "C-c C-e") 'eshell)
+(bind-key* "C-c C-e" 'eshell)
 ;(define-key web-mode-map (kbd "C-c C-e") 'eshell)
 
 ;; only with web-mode
@@ -432,20 +436,5 @@
 ;(define-key web-mode-map (kbd "C-c ;") 'web-mode-comment-or-uncomment)
 
 ;; dash-at-point
-(define-key global-map (kbd "C-c C-o") 'dash-at-point)
+(bind-key* "C-c C-o" 'dash-at-point)
 ;;(define-key global-map (kbd "C-c C-d") 'dash-at-point-with-docset); docsetを指定して検索する
-
-;; magit
-(global-set-key (kbd "C-c C-m") 'magit-status); magit-status
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(magit-log-arguments (quote ("--graph" "--color" "--decorate" "--follow"))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
