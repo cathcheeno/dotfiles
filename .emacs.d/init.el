@@ -231,7 +231,7 @@
 ;; ==============================
 (set-face-attribute 'mode-line
                     nil
-                    :background "yellow")
+                    :background "blue")
 
 ;; ==============================
 ;;; オートセーブ設定
