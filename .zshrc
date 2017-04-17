@@ -104,13 +104,10 @@ SDKROOT=$(xcrun --show-sdk-path -sdk macosx)
 alias swiftc="swiftc -sdk $SDKROOT"
 
 ### go
-export GOPATH=$HOME/gocode
-export GOOS=darwin
-export GOARCH=amd64
-#export GOROOT=/usr/local/opt/go/libexec
-#export GOBIN=$GOROOT/bin
-export GOBIN=$GOPATH/bin
-export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/go
+#export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOPATH/bin
 
 ### pyenv
 export PYENV_ROOT=$HOME/.pyenv
