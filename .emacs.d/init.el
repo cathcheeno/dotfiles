@@ -156,6 +156,18 @@
 (add-to-list 'auto-mode-alist '("\\.tag\\'" . js2-jsx-mode))
 
 ;; ==============================
+;;; pug-mode
+;; ==============================
+(require 'pug-mode)
+(add-to-list 'auto-mode-alist '("\\.tag\\'" . pug-mode))
+
+;; ==============================
+;;; css-mode
+;; ==============================
+(require 'css-mode)
+(add-to-list 'auto-mode-alist '("\\.pcss\\'" . css-mode))
+
+;; ==============================
 ;;; yaml-mode
 ;; ==============================
 (require 'yaml-mode)
@@ -171,7 +183,6 @@
 ;;; web-mode
 ;; ==============================
 (require 'web-mode)
-(add-to-list 'auto-mode-alist '("\\.tag\\'" . web-mode))
 ;(add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
 ;(add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
 ;(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
@@ -325,7 +336,9 @@
 ;; ==============================
 ;;; スクロール設定
 ;; ==============================
-(setq scroll-step 1)
+(setq scroll-conservatively 35
+  scroll-margin 0
+  scroll-step 1)
 
 ;; ==============================
 ;;; underline設定
@@ -440,3 +453,17 @@
 ;; dash-at-point
 (bind-key* "C-c C-o" 'dash-at-point)
 ;;(define-key global-map (kbd "C-c C-d") 'dash-at-point-with-docset); docsetを指定して検索する
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (pug-mode yaml-mode wgrep-ag web-mode swift-mode stylus-mode smart-mode-line-powerline-theme pkg-info php-mode malabar-mode magit load-relative let-alist js2-mode go-mode exec-path-from-shell emmet-mode editorconfig-core editorconfig dash-at-point color-theme bind-key auto-complete anything ansible ag))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

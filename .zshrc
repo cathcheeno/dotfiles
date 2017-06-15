@@ -110,10 +110,11 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 ### pyenv
-export PYENV_ROOT=$HOME/.pyenv
-export PATH=$PYENV_ROOT/bin:$PATH
-eval "$(pyenv init -)"
+#export PYENV_ROOT=$HOME/.pyenv
+#export PATH=$PYENV_ROOT/3.6.0/bin:$PATH
+#eval "$(pyenv init -)"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/a11937/.sdkman"
 [[ -s "/Users/a11937/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/a11937/.sdkman/bin/sdkman-init.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
