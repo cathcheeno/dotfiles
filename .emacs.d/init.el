@@ -162,6 +162,13 @@
 (add-to-list 'auto-mode-alist '("\\.tag\\'" . pug-mode))
 
 ;; ==============================
+;;; terraform-mode
+;; ==============================
+(require 'terraform-mode)
+(add-to-list 'auto-mode-alist '("\\.tf\\'" . terraform-mode))
+(add-to-list 'auto-mode-alist '("\\.tfvars\\'" . terraform-mode))
+
+;; ==============================
 ;;; css-mode
 ;; ==============================
 (require 'css-mode)
@@ -460,7 +467,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (pug-mode yaml-mode wgrep-ag web-mode swift-mode stylus-mode smart-mode-line-powerline-theme pkg-info php-mode malabar-mode magit load-relative let-alist js2-mode go-mode exec-path-from-shell emmet-mode editorconfig-core editorconfig dash-at-point color-theme bind-key auto-complete anything ansible ag))))
+    (terraform-mode pug-mode yaml-mode wgrep-ag web-mode swift-mode stylus-mode smart-mode-line-powerline-theme pkg-info php-mode malabar-mode magit load-relative let-alist js2-mode go-mode exec-path-from-shell emmet-mode editorconfig-core editorconfig dash-at-point color-theme bind-key auto-complete anything ansible ag))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
