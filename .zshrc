@@ -109,6 +109,9 @@ export GOPATH=$HOME/go
 #export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOPATH/bin
 
+### adb
+export PATH=$PATH:/usr/local/adb
+
 ### pyenv
 #export PYENV_ROOT=$HOME/.pyenv
 #export PATH=$PYENV_ROOT/3.6.0/bin:$PATH

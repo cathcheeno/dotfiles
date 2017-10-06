@@ -1,7 +1,3 @@
-pwd
-ls
-cd src/
-ls
 mkdir cathcheeno
 ls
 rm -rf backup/
@@ -125,4 +121,8 @@ gradle check
 gradle -q check
 gradle check
 q
+exit
+exit
+pwd
+exit
 exit
