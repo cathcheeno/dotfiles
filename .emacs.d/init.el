@@ -42,6 +42,11 @@
 (require 'anything)
 
 ;; ==============================
+;;; rg設定
+;; ==============================
+(setq ripgrep-arguments '("-S -uu"))
+
+;; ==============================
 ;;; dash-at-point設定
 ;; ==============================
 ;; go-modeのときのDocsetはgoとする
@@ -145,11 +150,13 @@
 ;;; js2-mode
 ;; ==============================
 ;;(autoload 'js2-mode "js2-mode" nil t)
+(require 'js2-mode)
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
 ;; ==============================
 ;;; js2-jsx-mode
 ;; ==============================
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-jsx-mode))
+;(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-jsx-mode))
 (add-to-list 'auto-mode-alist '("\\.flow\\'" . js2-jsx-mode))
 (add-to-list 'auto-mode-alist '("\\.tsx\\'" . js2-jsx-mode))
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . js2-jsx-mode))
@@ -196,6 +203,7 @@
 ;;; web-mode
 ;; ==============================
 (require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.blade.php\\'" . web-mode))
 ;(add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
 ;(add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
 ;(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
@@ -442,8 +450,8 @@
 ;; "C-z"でundo
 (bind-key* "C-z" 'undo)
 
-;; ag検索
-(bind-key* "C-c C-g" 'ag)
+;; 検索
+(bind-key* "C-c C-g" 'ripgrep-regexp)
 
 ;; コードフォールディング
 (global-set-key (kbd "C-o") 'hs-toggle-hiding)
@@ -451,9 +459,6 @@
 ;; 先頭/末尾に移動
 (bind-key* "C-c <" 'beginning-of-buffer); バッファの先頭に移動
 (bind-key* "C-c >" 'end-of-buffer); バッファの末尾に移動
-
-;; grep
-(bind-key* "C-c C-g" 'rgrep)
 
 ;; eshell
 (bind-key* "C-c C-e" 'eshell)
@@ -471,9 +476,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (markdown-mode dockerfile-mode terraform-mode pug-mode yaml-mode wgrep-ag web-mode swift-mode stylus-mode smart-mode-line-powerline-theme pkg-info php-mode malabar-mode magit load-relative let-alist js2-mode go-mode exec-path-from-shell emmet-mode editorconfig-core editorconfig dash-at-point color-theme bind-key auto-complete anything ansible ag))))
+  '(package-selected-packages
+     (quote
+       (ripgrep markdown-mode dockerfile-mode terraform-mode pug-mode yaml-mode wgrep-ag web-mode swift-mode stylus-mode smart-mode-line-powerline-theme pkg-info php-mode malabar-mode magit load-relative let-alist js2-mode go-mode exec-path-from-shell emmet-mode editorconfig-core editorconfig dash-at-point color-theme bind-key auto-complete anything ansible ag))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

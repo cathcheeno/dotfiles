@@ -1,9 +1,3 @@
-mkdir cathcheeno
-ls
-rm -rf backup/
-ls
-cd github.com/
-ls
 cd codegangsta/
 ls
 ls -la
@@ -124,5 +118,11 @@ q
 exit
 exit
 pwd
+exit
+exit
+exit
+exit
+exit
+.UniverseVideoPage_SeriesListItem__info
 exit
 exit
