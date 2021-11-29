@@ -83,8 +83,14 @@ source ~/.nvm/nvm.sh
 #nvm use v7.9.0
 #nvm alias default 9.3.0
 #nvm use v9.3.0
-nvm alias default 10.9.0
-nvm use v10.9.0
+#nvm alias default 12.6.0
+#nvm use v12.6.0
+#nvm alias default 12.10.0
+#nvm use v12.10.0
+#nvm alias default 15.5.1
+#nvm use v15.5.1
+nvm alias default 15.14.0
+nvm use v15.14.0
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -101,32 +107,13 @@ fi
 ### mongodb
 export PATH=$HOME/mongodb/bin:$PATH
 
-### swiftc
-#SDKROOT=$(xcrun --show-sdk-path -sdk macosx)
-#alias swiftc="swiftc -sdk $SDKROOT"
-
-### go
-export PATH=$PATH:/usr/local/go/bin
-export GOPATH=$HOME/go
-#export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOPATH/bin
-
-### adb
-export PATH=$PATH:/usr/local/adb
-
 ### neirong istio
 export PATH=$PATH:/Users/a11937/Documents/cam-inc/neirong/istio/istio-1.0.2/bin
 
+### fastlane
+export PATH=$HOME/.fastlane/bin:$PATH
+
 ### pyenv
-#export PYENV_ROOT=$HOME/.pyenv
-#export PATH=$PYENV_ROOT/3.6.0/bin:$PATH
-#eval "$(pyenv init -)"
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-#export SDKMAN_DIR="/Users/a11937/.sdkman"
-#[[ -s "/Users/a11937/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/a11937/.sdkman/bin/sdkman-init.sh"
-#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-### Google Cloud SDK
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+export PYENV_ROOT=$HOME/.pyenv
+export PATH=$PYENV_ROOT/bin:$PATH
+eval "$(pyenv init -)"

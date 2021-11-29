@@ -19,9 +19,10 @@
 ;; ==============================
 ;; パッケージ管理のインストール候補を増やす
 (require 'package)
-(add-to-list 'package-archives'("melpa" . "http://melpa.milkbox.net/packages/") t)
-(add-to-list 'package-archives'("melpa-stable" . "http://melpa-stable.milkbox.net/packages/") t)
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+;(add-to-list 'package-archives'("melpa" . "http://melpa.milkbox.net/packages/"))
+;(add-to-list 'package-archives'("melpa-stable" . "http://melpa-stable.milkbox.net/packages/"))
+;(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives'("melpa" . "http://stable.melpa.org/packages/"))
 (package-initialize)
 
 ;; ==============================
@@ -104,7 +105,38 @@
 ;; CSSにも使う
 ;(add-hook 'css-mode-hook 'emmet-mode)
 ;; indentはスペース2つ
-;(add-hook 'emmet-mode-hook (lambda () (setq emmet-indentation 2)))
+                                        ;(add-hook 'emmet-mode-hook (lambda () (setq emmet-indentation 2)))
+
+;; aligns annotation to the right hand side
+(setq company-tooltip-align-annotations t)
+
+;; formats the buffer before saving
+(add-hook 'before-save-hook 'tide-format-before-save)
+
+(add-hook 'typescript-mode-hook #'setup-tide-mode)
+
+;; ==============================
+;;; company設定
+;; ==============================
+(require 'company)
+(global-company-mode) ; 全バッファで有効にする
+(setq company-idle-delay 0) ; デフォルトは0.5
+(setq company-minimum-prefix-length 2) ; デフォルトは4
+(setq company-selection-wrap-around t) ; 候補の一番下でさらに下に行こうとすると一番上に戻る
+(set-face-attribute 'company-tooltip nil
+    :foreground "black" :background "lightgrey")
+(set-face-attribute 'company-tooltip-common nil
+    :foreground "black" :background "lightgrey")
+(set-face-attribute 'company-tooltip-common-selection nil
+    :foreground "white" :background "steelblue")
+(set-face-attribute 'company-tooltip-selection nil
+    :foreground "black" :background "steelblue")
+(set-face-attribute 'company-preview-common nil
+    :background nil :foreground "lightgrey" :underline t)
+(set-face-attribute 'company-scrollbar-fg nil
+    :background "grey60")
+(set-face-attribute 'company-scrollbar-bg nil
+    :background "gray40")
 
 ;; ==============================
 ;;; ag設定
@@ -150,17 +182,62 @@
 ;;; js2-mode
 ;; ==============================
 ;;(autoload 'js2-mode "js2-mode" nil t)
-(require 'js2-mode)
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+;;(require 'js2-mode)
+                                        ;(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+
+;; ==============================
+;;; rjsx-mode
+;; ==============================
+;; TODO: emacs27ではjsxがネイティブでサポートされるので、27リリース後はmodeを変更した方がベター説。
+(add-to-list 'auto-mode-alist '(".*\\.js\\'" . rjsx-mode))
+(add-to-list 'auto-mode-alist '(".*\\.jsx\\'" . rjsx-mode))
+;(add-to-list 'auto-mode-alist '(".*\\.ts\\'" . rjsx-mode))
+;(add-to-list 'auto-mode-alist '(".*\\.tsx\\'" . rjsx-mode))
+(add-hook 'rjsx-mode-hook
+          (lambda ()
+            (setq indent-tabs-mode nil) ;;インデントはタブではなくスペース
+            (setq js-indent-level 2) ;;スペースは２つ、デフォルトは4
+            (setq js2-strict-missing-semi-warning nil))) ;;行末のセミコロンの警告はオフ
+
 
 ;; ==============================
 ;;; js2-jsx-mode
 ;; ==============================
 ;(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-jsx-mode))
-(add-to-list 'auto-mode-alist '("\\.flow\\'" . js2-jsx-mode))
-(add-to-list 'auto-mode-alist '("\\.tsx\\'" . js2-jsx-mode))
-(add-to-list 'auto-mode-alist '("\\.jsx\\'" . js2-jsx-mode))
-(add-to-list 'auto-mode-alist '("\\.tag\\'" . js2-jsx-mode))
+;(add-to-list 'auto-mode-alist '("\\.flow\\'" . js2-jsx-mode))
+;(add-to-list 'auto-mode-alist '("\\.ts\\'" . js2-jsx-mode))
+;(add-to-list 'auto-mode-alist '("\\.tsx\\'" . js2-jsx-mode))
+;(add-to-list 'auto-mode-alist '("\\.jsx\\'" . js2-jsx-mode))
+;(add-to-list 'auto-mode-alist '("\\.tag\\'" . js2-jsx-mode))
+
+;; ==============================
+;;; typescript-mode
+;; ==============================
+(require 'typescript-mode)
+(setq typescript-indent-level 2)
+(add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
+(add-to-list 'auto-mode-alist '("\\.tsx\\'" . typescript-mode))
+
+;; ==============================
+;;; TypeScript設定
+;; ==============================
+(require 'tide)
+(add-hook 'typescript-mode-hook
+          '(lambda ()
+             (interactive)
+             (tide-setup)
+             (flycheck-mode +1)
+             (tide-hl-identifier-mode +1)
+             (company-mode +1)
+             (eldoc-mode +1)
+             ))
+
+
+;; ==============================
+;;; handlebars-mode
+;; ==============================
+(require 'handlebars-mode)
+(add-to-list 'auto-mode-alist '("\\.hbs\\'" . handlebars-mode))
 
 ;; ==============================
 ;;; pug-mode
@@ -258,7 +335,9 @@
 (ac-config-default)
 (add-to-list 'ac-modes 'swift-mode)
 (add-to-list 'ac-modes 'js2-mode)
+(add-to-list 'ac-modes 'rjsx-mode)
 (add-to-list 'ac-modes 'js2-jsx-mode)
+(add-to-list 'ac-modes 'typescript-mode)
 
 ;; ==============================
 ;;; windowのactive/inactive状態に応じて、モードラインをスタイルを変更する
@@ -344,7 +423,7 @@
 ;;; タブ設定
 ;; ==============================
 ;; tabの表示幅を設定
-(setq-default tab-width 4)
+(setq-default tab-width 2)
 
 ;; インデントにtab文字を使用しない
 (setq-default indent-tabs-mode nil)
@@ -441,6 +520,11 @@
 ;; "C-t"でウィンドウを切り替える
 (bind-key "C-t" 'other-window)
 
+;; "C-j"で定義元にジャンプ。(tide)
+(bind-key "C-c C-j" 'tide-jump-to-definition)
+;; "C-b"で定義参照開始ファイルに戻る。(tide)
+(bind-key "C-c C-b" 'tide-jump-back)
+
 ;; ウィンドウのサイズを変更
 (bind-key* "C-<up>" 'enlarge-window)
 (bind-key* "C-<down>" 'shrink-window)
@@ -454,7 +538,7 @@
 (bind-key* "C-c C-g" 'ripgrep-regexp)
 
 ;; コードフォールディング
-(global-set-key (kbd "C-o") 'hs-toggle-hiding)
+(global-set-key (kbd "C-{") 'hs-toggle-hiding)
 
 ;; 先頭/末尾に移動
 (bind-key* "C-c <" 'beginning-of-buffer); バッファの先頭に移動
@@ -476,9 +560,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
-  '(package-selected-packages
-     (quote
-       (ripgrep markdown-mode dockerfile-mode terraform-mode pug-mode yaml-mode wgrep-ag web-mode swift-mode stylus-mode smart-mode-line-powerline-theme pkg-info php-mode malabar-mode magit load-relative let-alist js2-mode go-mode exec-path-from-shell emmet-mode editorconfig-core editorconfig dash-at-point color-theme bind-key auto-complete anything ansible ag))))
+ '(package-selected-packages
+   (quote
+    (flycheck company tide rjsx-mode handlebars-mode typescript typescript-mode ripgrep markdown-mode dockerfile-mode terraform-mode pug-mode yaml-mode wgrep-ag web-mode swift-mode stylus-mode smart-mode-line-powerline-theme pkg-info php-mode malabar-mode magit load-relative let-alist js2-mode go-mode exec-path-from-shell emmet-mode editorconfig-core editorconfig dash-at-point color-theme bind-key auto-complete anything ansible ag))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
