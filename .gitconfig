@@ -54,3 +54,5 @@
 #	process = git-lfs filter-process
 #[url "https://178c4c9d9a9f2291bfb9eea03d6ed134b490539c:x-oauth-basic@github.com/"]
 #	insteadOf = https://github.com/
+[commit]
+	template = ./.gitmessage

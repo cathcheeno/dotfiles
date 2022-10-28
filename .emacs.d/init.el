@@ -504,6 +504,8 @@
 ;; クリップボードの内容をヤンク可能にする
 (setq x-select-enable-primary t)
 
+(setq browse-url-mosaic-program "xmosaic")
+
 ;; ==============================
 ;;; global key map設定
 ;; ==============================
