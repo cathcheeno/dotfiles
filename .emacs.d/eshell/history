@@ -1,8 +1,3 @@
-cd gocode/src/cathcheeno/
-cd src/cathcheeno/
-go run main.go 
-go run main.go 
-ls
 cat 1.txt 
 ls
 echo $GOPATH
@@ -117,6 +112,11 @@ exit
 exit
 exit
 .UniverseVideoPage_SeriesListItem__info
+exit
+exit
+exit
+exit
+exit
 exit
 exit
 exit

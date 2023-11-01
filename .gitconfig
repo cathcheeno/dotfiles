@@ -1,5 +1,6 @@
 [user]
-	name = Go Ohtani
+#	name = Go Ohtani
+	name = ohtani-go-ab
 	email = cathcheeno@gmail.com
 
 [push]

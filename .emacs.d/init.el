@@ -150,9 +150,9 @@
 ;; ==============================
 ;;; editorconfig
 ;; ==============================
-(setq edconf-exec-path "/usr/local/bin/editorconfig"); Homebrew でインストールしたコマンドのパス
-(load "editorconfig")
-(editorconfig-mode 1)
+;(setq edconf-exec-path "/opt/homebrew/bin/editorconfig"); Homebrew でインストールしたコマンドのパス
+;(load "editorconfig")
+;(editorconfig-mode 1)
 
 ;; ==============================
 ;;; wgrep設定
@@ -481,10 +481,10 @@
 ;;; 対応する括弧
 ;; ==============================
 ;; 対応する括弧を強調して表示
-(setq show-paren-delay 0); 表示までの秒数
+(setq show-paren-delay 0); 示表までの秒数
 (show-paren-mode t); 有効化
 (set-face-background 'show-paren-match-face "blue")
-(set-face-underline-p 'show-paren-match-face "yellow")
+(set-face-underline 'show-paren-match-face "yellow")
 
 ;; ==============================
 ;;; 補完設定
@@ -503,7 +503,6 @@
 ;; ==============================
 ;; クリップボードの内容をヤンク可能にする
 (setq x-select-enable-primary t)
-
 (setq browse-url-mosaic-program "xmosaic")
 
 ;; ==============================
@@ -513,7 +512,24 @@
 (require 'bind-key)
 (bind-key* "C-c C-c" 'kill-ring-save); コピー
 (bind-key* "C-c C-x" 'kill-region); カット
-(bind-key* "C-c C-v" 'anything-show-kill-ring); kill-ring表示
+(use-package ivy
+    :ensure t
+      :config  (ivy-mode 1))
+(use-package counsel
+    :ensure t)
+(global-set-key (kbd "C-c C-v") 'counsel-yank-pop) ; キルリングの表示に使用するキーバインディング
+;(bind-key* "C-c C-v" 'yank)
+;(defun show-kill-ring ()
+;  "Display the contents of the kill ring in a new buffer."
+;  (interactive)
+;  (let ((buffer-name "*Kill Ring*"))
+;    (pop-to-buffer buffer-name)
+;    (erase-buffer)
+;    (insert "Kill Ring:\n\n")
+;    (dolist (item kill-ring)
+;      (insert item "\n\n"))
+;    (goto-char (point-min))))
+;(global-set-key (kbd "C-c C-l") 'show-kill-ring)
 (bind-key* "C-c C-r" 'query-replace); 置換
 
 ;; "C-m"にnewline-and-indentを割り当てる
@@ -547,7 +563,7 @@
 (bind-key* "C-c >" 'end-of-buffer); バッファの末尾に移動
 
 ;; eshell
-(bind-key* "C-c C-e" 'eshell)
+;(bind-key* "C-c C-e" 'eshell)
 ;(define-key web-mode-map (kbd "C-c C-e") 'eshell)
 
 ;; only with web-mode
@@ -563,8 +579,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   (quote
-    (flycheck company tide rjsx-mode handlebars-mode typescript typescript-mode ripgrep markdown-mode dockerfile-mode terraform-mode pug-mode yaml-mode wgrep-ag web-mode swift-mode stylus-mode smart-mode-line-powerline-theme pkg-info php-mode malabar-mode magit load-relative let-alist js2-mode go-mode exec-path-from-shell emmet-mode editorconfig-core editorconfig dash-at-point color-theme bind-key auto-complete anything ansible ag))))
+   '(counsel ivy flycheck company tide rjsx-mode handlebars-mode typescript typescript-mode ripgrep markdown-mode dockerfile-mode terraform-mode pug-mode yaml-mode wgrep-ag web-mode swift-mode stylus-mode smart-mode-line-powerline-theme pkg-info php-mode malabar-mode magit load-relative let-alist js2-mode go-mode exec-path-from-shell emmet-mode editorconfig-core editorconfig dash-at-point color-theme bind-key auto-complete anything ansible ag)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
