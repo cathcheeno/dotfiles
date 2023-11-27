@@ -151,8 +151,8 @@
 ;;; editorconfig
 ;; ==============================
 ;(setq edconf-exec-path "/opt/homebrew/bin/editorconfig"); Homebrew でインストールしたコマンドのパス
-;(load "editorconfig")
-;(editorconfig-mode 1)
+(load "editorconfig")
+(editorconfig-mode 1)
 
 ;; ==============================
 ;;; wgrep設定
@@ -491,6 +491,12 @@
 ;; ==============================
 ; 検索の際、大文字小文字を区別しない
 (setq completion-ignore-case t)
+
+;; ==============================
+;;; 音設定
+;; ==============================
+; 音を鳴らさない
+(setq ring-bell-function 'ignore)
 
 ;; ==============================
 ;;; 終了時
